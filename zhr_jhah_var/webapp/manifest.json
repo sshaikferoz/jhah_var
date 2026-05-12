@@ -96,7 +96,9 @@
         {
           "pattern": ":?query:",
           "name": "VarListList",
-          "target": "VarListList"
+          "target": [
+            "VarListList"
+          ]
         },
         {
           "pattern": "VarList({key}):?query:",
@@ -162,6 +164,15 @@
               "editableHeaderContent": false,
               "contextPath": "/VarList/_VisitorDetails"
             }
+          }
+        }
+      }
+    },
+    "extends": {
+      "extensions": {
+        "sap.ui.controllerExtensions": {
+          "sap.fe.templates.ListReport.ListReportController": {
+            "controllerName": "com.jhah.zhrjhahvar.ext.controller.CustomHeader"
           }
         }
       }

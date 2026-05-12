@@ -1,0 +1,37 @@
+<mvc:View
+	height="100%"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+
+	<ObjectHeader
+		id="employeeHeader"
+		responsive="true"
+		fullScreenOptimized="true"
+		icon="sap-icon://person-placeholder"
+		imageShape="Circle"
+		title="{userInfo>/UserName}"
+		intro="{userInfo>/PostionText}"
+		backgroundDesign="Solid"
+		class="sapUiTinyMarginBottom sapUiResponsivePadding--header">
+
+		<attributes>
+			<ObjectAttribute id="_IDGenObjectAttribute1" title="Payroll Number" text="{userInfo>/Pernr}" />
+			<ObjectAttribute id="_IDGenObjectAttribute2" title="Login ID" text="{userInfo>/Usrid}" />
+			<ObjectAttribute id="_IDGenObjectAttribute3" title="Work Phone" text="{userInfo>/WorkPhone}" />
+
+			<!-- Removed Job Title and Full Name from attributes as they are now in the Title/Intro -->
+			<ObjectAttribute id="_IDGenObjectAttribute5" title="Date of Birth" text="{userInfo>/DOB}" />
+			<ObjectAttribute id="_IDGenObjectAttribute6" title="Blood Group" text="{userInfo>/BloodGroup}" />
+
+			<ObjectAttribute id="_IDGenObjectAttribute8" title="E-Mail" text="{userInfo>/EMail}" active="true" press="onEmailPress" />
+			<ObjectAttribute id="_IDGenObjectAttribute9" title="Unit Name" text="{userInfo>/Organization}" />
+
+			<ObjectAttribute id="_IDGenObjectAttribute10" title="Badge Number" text="{userInfo>/UserPosition}" />
+			<ObjectAttribute id="_IDGenObjectAttribute11" title="Government ID" text="{userInfo>/GovermentID}" />
+			<ObjectAttribute id="_IDGenObjectAttribute12" title="Department" text="{userInfo>/Department}" />
+		</attributes>
+
+	</ObjectHeader>
+</mvc:View>
